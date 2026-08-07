@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Offline Sprache zu Text</string>
+    <string name="lang_select">Sprache auswählen</string>
+    <string name="checking">On-Device-Spracherkennung wird geprüft…</string>
+    <string name="downloading_title">Sprachmodell wird heruntergeladen…</string>
+    <string name="downloading_once">Das Modell wird nur einmal bei der ersten Nutzung heruntergeladen.</string>
+    <string name="downloading_bg">Das System lädt das Sprachmodell im Hintergrund herunter. Der Fortschritt wird möglicherweise nicht angezeigt; bitte bleiben Sie verbunden und warten Sie.\n\nTippen Sie anschließend unten auf „Erneut prüfen“.</string>
+    <string name="recheck">Erneut prüfen</string>
+    <string name="unsupported_title">Ihr Gerät kann die On-Device-Spracherkennung nicht nutzen, sorry</string>
+    <string name="unsupported_desc">Diese Funktion erfordert ein Gerät, das ML Kit GenAI-Spracherkennung (Basic-Modus, Android 12+) unterstützt.</string>
+    <string name="transcript_placeholder">Tippen Sie unten auf das Mikrofon und beginnen Sie zu sprechen. Der erkannte Text erscheint hier in Echtzeit.</string>
+    <string name="clear">Löschen</string>
+    <string name="mic_start">Aufnahme starten</string>
+    <string name="mic_stop">Stopp</string>
+    <string name="listening">Höre zu… zum Stoppen tippen</string>
+    <string name="tap_to_speak">Zum Sprechen tippen</string>
+    <string name="err_unsupported">Dieses Gerät unterstützt keine On-Device-Spracherkennung (Basic-Modus).</string>
+    <string name="err_download_failed">Modell-Download fehlgeschlagen</string>
+    <string name="err_recognition">Ein Erkennungsfehler ist aufgetreten</string>
+</resources>

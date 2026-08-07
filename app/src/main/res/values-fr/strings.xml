@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Voix en texte hors ligne</string>
+    <string name="lang_select">Choisir la langue</string>
+    <string name="checking">Vérification de la reconnaissance vocale sur l\'appareil…</string>
+    <string name="downloading_title">Téléchargement du modèle vocal…</string>
+    <string name="downloading_once">Le modèle n\'est téléchargé qu\'une seule fois, lors de la première utilisation.</string>
+    <string name="downloading_bg">Le système télécharge le modèle vocal en arrière-plan. La progression peut ne pas s\'afficher ; restez connecté et patientez.\n\nUne fois terminé, appuyez sur « Revérifier » ci-dessous.</string>
+    <string name="recheck">Revérifier</string>
+    <string name="unsupported_title">Votre appareil ne peut pas utiliser la reconnaissance vocale sur l\'appareil, désolé</string>
+    <string name="unsupported_desc">Cette fonction nécessite un appareil compatible avec la reconnaissance vocale ML Kit GenAI (mode Basic, Android 12+).</string>
+    <string name="transcript_placeholder">Appuyez sur le micro ci-dessous et commencez à parler. Le texte reconnu apparaîtra ici en temps réel.</string>
+    <string name="clear">Effacer</string>
+    <string name="mic_start">Démarrer l\'enregistrement</string>
+    <string name="mic_stop">Arrêter</string>
+    <string name="listening">Écoute… appuyez pour arrêter</string>
+    <string name="tap_to_speak">Appuyez pour parler</string>
+    <string name="err_unsupported">Cet appareil ne prend pas en charge la reconnaissance vocale sur l\'appareil (mode Basic).</string>
+    <string name="err_download_failed">Échec du téléchargement du modèle</string>
+    <string name="err_recognition">Une erreur de reconnaissance s\'est produite</string>
+</resources>

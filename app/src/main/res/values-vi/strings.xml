@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chuyển giọng nói thành văn bản ngoại tuyến</string>
+    <string name="lang_select">Chọn ngôn ngữ</string>
+    <string name="checking">Đang kiểm tra nhận dạng giọng nói trên thiết bị…</string>
+    <string name="downloading_title">Đang tải mô hình giọng nói…</string>
+    <string name="downloading_once">Mô hình chỉ được tải xuống một lần trong lần sử dụng đầu tiên.</string>
+    <string name="downloading_bg">Hệ thống đang tải mô hình giọng nói ở chế độ nền. Tiến trình có thể không hiển thị; vui lòng giữ kết nối và chờ.\n\nKhi hoàn tất, hãy nhấn “Kiểm tra lại” bên dưới.</string>
+    <string name="recheck">Kiểm tra lại</string>
+    <string name="unsupported_title">Thiết bị của bạn không thể dùng nhận dạng giọng nói trên thiết bị, xin lỗi</string>
+    <string name="unsupported_desc">Tính năng này cần thiết bị hỗ trợ nhận dạng giọng nói ML Kit GenAI (chế độ Basic, Android 12 trở lên).</string>
+    <string name="transcript_placeholder">Nhấn micrô bên dưới và bắt đầu nói. Văn bản nhận dạng sẽ hiển thị tại đây theo thời gian thực.</string>
+    <string name="clear">Xóa</string>
+    <string name="mic_start">Bắt đầu ghi âm</string>
+    <string name="mic_stop">Dừng</string>
+    <string name="listening">Đang nghe… nhấn để dừng</string>
+    <string name="tap_to_speak">Nhấn để bắt đầu nói</string>
+    <string name="err_unsupported">Thiết bị này không hỗ trợ nhận dạng giọng nói trên thiết bị (chế độ Basic).</string>
+    <string name="err_download_failed">Tải mô hình thất bại</string>
+    <string name="err_recognition">Đã xảy ra lỗi nhận dạng</string>
+</resources>

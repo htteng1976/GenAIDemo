@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">離線語音轉文字</string>
+    <string name="lang_select">選擇語言</string>
+    <string name="checking">正在檢查裝置端語音辨識…</string>
+    <string name="downloading_title">正在下載語音辨識模型…</string>
+    <string name="downloading_once">首次使用需下載模型,只會進行一次。</string>
+    <string name="downloading_bg">系統正在背景下載語音模型,此過程可能不會顯示進度,請保持網路連線並稍候。\n\n下載完成後,請點下方「重新檢查」。</string>
+    <string name="recheck">重新檢查</string>
+    <string name="unsupported_title">您的裝置不能使用裝置端語音辨識,sorry</string>
+    <string name="unsupported_desc">此功能需要裝置支援 ML Kit GenAI 語音辨識(Basic 模式,Android 12 以上)。</string>
+    <string name="transcript_placeholder">點下方麥克風開始說話,辨識文字會即時顯示在這裡。</string>
+    <string name="clear">清除</string>
+    <string name="mic_start">開始錄音</string>
+    <string name="mic_stop">停止</string>
+    <string name="listening">聆聽中…點一下停止</string>
+    <string name="tap_to_speak">點一下開始說話</string>
+    <string name="err_unsupported">此裝置不支援裝置端語音辨識(Basic 模式)。</string>
+    <string name="err_download_failed">模型下載失敗</string>
+    <string name="err_recognition">辨識發生錯誤</string>
+</resources>

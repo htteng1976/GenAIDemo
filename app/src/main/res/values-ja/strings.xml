@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">オフライン音声文字変換</string>
+    <string name="lang_select">言語を選択</string>
+    <string name="checking">オンデバイス音声認識を確認中…</string>
+    <string name="downloading_title">音声認識モデルをダウンロード中…</string>
+    <string name="downloading_once">モデルのダウンロードは初回のみ行われます。</string>
+    <string name="downloading_bg">システムがバックグラウンドで音声モデルをダウンロードしています。進行状況が表示されない場合があります。接続を維持してお待ちください。\n\n完了したら、下の「再確認」をタップしてください。</string>
+    <string name="recheck">再確認</string>
+    <string name="unsupported_title">このデバイスではオンデバイス音声認識を利用できません、ごめんなさい</string>
+    <string name="unsupported_desc">この機能には ML Kit GenAI 音声認識(Basic モード、Android 12 以上)に対応したデバイスが必要です。</string>
+    <string name="transcript_placeholder">下のマイクをタップして話し始めてください。認識されたテキストがここにリアルタイムで表示されます。</string>
+    <string name="clear">クリア</string>
+    <string name="mic_start">録音を開始</string>
+    <string name="mic_stop">停止</string>
+    <string name="listening">認識中… タップで停止</string>
+    <string name="tap_to_speak">タップして話し始める</string>
+    <string name="err_unsupported">このデバイスはオンデバイス音声認識(Basic モード)に対応していません。</string>
+    <string name="err_download_failed">モデルのダウンロードに失敗しました</string>
+    <string name="err_recognition">認識エラーが発生しました</string>
+</resources>

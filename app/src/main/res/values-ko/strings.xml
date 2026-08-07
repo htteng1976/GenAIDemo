@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">오프라인 음성 텍스트 변환</string>
+    <string name="lang_select">언어 선택</string>
+    <string name="checking">온디바이스 음성 인식 확인 중…</string>
+    <string name="downloading_title">음성 인식 모델 다운로드 중…</string>
+    <string name="downloading_once">모델은 최초 사용 시 한 번만 다운로드됩니다.</string>
+    <string name="downloading_bg">시스템이 백그라운드에서 음성 모델을 다운로드하고 있습니다. 진행 상황이 표시되지 않을 수 있으니 연결을 유지하고 기다려 주세요.\n\n완료되면 아래 “다시 확인”을 누르세요.</string>
+    <string name="recheck">다시 확인</string>
+    <string name="unsupported_title">이 기기는 온디바이스 음성 인식을 사용할 수 없습니다, 죄송합니다</string>
+    <string name="unsupported_desc">이 기능은 ML Kit GenAI 음성 인식(Basic 모드, Android 12 이상)을 지원하는 기기가 필요합니다.</string>
+    <string name="transcript_placeholder">아래 마이크를 누르고 말하세요. 인식된 텍스트가 여기에 실시간으로 표시됩니다.</string>
+    <string name="clear">지우기</string>
+    <string name="mic_start">녹음 시작</string>
+    <string name="mic_stop">중지</string>
+    <string name="listening">듣는 중… 눌러서 중지</string>
+    <string name="tap_to_speak">눌러서 말하기 시작</string>
+    <string name="err_unsupported">이 기기는 온디바이스 음성 인식(Basic 모드)을 지원하지 않습니다.</string>
+    <string name="err_download_failed">모델 다운로드 실패</string>
+    <string name="err_recognition">인식 오류가 발생했습니다</string>
+</resources>

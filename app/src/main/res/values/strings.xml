@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Offline Voice to Text</string>
+    <string name="lang_select">Select language</string>
+    <string name="checking">Checking on-device speech recognition…</string>
+    <string name="downloading_title">Downloading the speech model…</string>
+    <string name="downloading_once">The model is downloaded only once, on first use.</string>
+    <string name="downloading_bg">The system is downloading the speech model in the background. Progress may not be shown, so please stay connected and wait. When it\'s done, tap “Re-check” below.</string>
+    <string name="recheck">Re-check</string>
+    <string name="unsupported_title">Your device can\'t use on-device speech recognition, sorry</string>
+    <string name="unsupported_desc">This feature needs a device that supports ML Kit GenAI speech recognition (Basic mode, Android 12+).</string>
+    <string name="transcript_placeholder">Tap the mic below and start speaking. The recognised text will appear here in real time.</string>
+    <string name="clear">Clear</string>
+    <string name="mic_start">Start recording</string>
+    <string name="mic_stop">Stop</string>
+    <string name="listening">Listening… tap to stop</string>
+    <string name="tap_to_speak">Tap to start speaking</string>
+    <string name="err_unsupported">This device does not support on-device speech recognition (Basic mode).</string>
+    <string name="err_download_failed">Model download failed</string>
+    <string name="err_recognition">A recognition error occurred</string>
+</resources>

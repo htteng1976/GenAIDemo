@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">离线语音转文字</string>
+    <string name="lang_select">选择语言</string>
+    <string name="checking">正在检查设备端语音识别…</string>
+    <string name="downloading_title">正在下载语音识别模型…</string>
+    <string name="downloading_once">首次使用需下载模型,只会进行一次。</string>
+    <string name="downloading_bg">系统正在后台下载语音模型,此过程可能不会显示进度,请保持网络连接并稍候。\n\n下载完成后,请点下方“重新检查”。</string>
+    <string name="recheck">重新检查</string>
+    <string name="unsupported_title">您的设备不能使用设备端语音识别,sorry</string>
+    <string name="unsupported_desc">此功能需要设备支持 ML Kit GenAI 语音识别(Basic 模式,Android 12 以上)。</string>
+    <string name="transcript_placeholder">点下方麦克风开始说话,识别文字会实时显示在这里。</string>
+    <string name="clear">清除</string>
+    <string name="mic_start">开始录音</string>
+    <string name="mic_stop">停止</string>
+    <string name="listening">聆听中…点一下停止</string>
+    <string name="tap_to_speak">点一下开始说话</string>
+    <string name="err_unsupported">此设备不支持设备端语音识别(Basic 模式)。</string>
+    <string name="err_download_failed">模型下载失败</string>
+    <string name="err_recognition">识别发生错误</string>
+</resources>

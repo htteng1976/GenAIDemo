@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Voz a texto sin conexión</string>
+    <string name="lang_select">Seleccionar idioma</string>
+    <string name="checking">Comprobando el reconocimiento de voz en el dispositivo…</string>
+    <string name="downloading_title">Descargando el modelo de voz…</string>
+    <string name="downloading_once">El modelo se descarga solo una vez, en el primer uso.</string>
+    <string name="downloading_bg">El sistema está descargando el modelo de voz en segundo plano. Es posible que no se muestre el progreso; mantén la conexión y espera.\n\nCuando termine, toca «Volver a comprobar» abajo.</string>
+    <string name="recheck">Volver a comprobar</string>
+    <string name="unsupported_title">Tu dispositivo no puede usar el reconocimiento de voz en el dispositivo, lo sentimos</string>
+    <string name="unsupported_desc">Esta función requiere un dispositivo compatible con el reconocimiento de voz de ML Kit GenAI (modo Basic, Android 12+).</string>
+    <string name="transcript_placeholder">Toca el micrófono de abajo y empieza a hablar. El texto reconocido aparecerá aquí en tiempo real.</string>
+    <string name="clear">Borrar</string>
+    <string name="mic_start">Iniciar grabación</string>
+    <string name="mic_stop">Detener</string>
+    <string name="listening">Escuchando… toca para detener</string>
+    <string name="tap_to_speak">Toca para empezar a hablar</string>
+    <string name="err_unsupported">Este dispositivo no admite el reconocimiento de voz en el dispositivo (modo Basic).</string>
+    <string name="err_download_failed">Error al descargar el modelo</string>
+    <string name="err_recognition">Se produjo un error de reconocimiento</string>
+</resources>

@@ -1,0 +1,31 @@
+# Gradle / build
+.gradle/
+build/
+app/build/
+captures/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Local config (machine-specific)
+local.properties
+
+# Signing — NEVER commit keystores or passwords
+*.jks
+*.keystore
+keystore.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+.DS_Store
+
+# Logs
+*.log
+
+# Kotlin build sessions
+.kotlin/
+
+# Claude Code local settings
+.claude/settings.local.json
