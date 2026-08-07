@@ -24,7 +24,7 @@ android {
         applicationId = "com.htteng.voicetotext"
         minSdk = 31
         targetSdk = 36
-        versionCode = 1
+        versionCode = 2
         versionName = "1.0"
         vectorDrawables { useSupportLibrary = true }
     }
@@ -44,11 +44,15 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            // Embed native debug symbols in the AAB (resolves Play's
+            // "no debug symbols" warning for the bundled .so libraries).
+            ndk { debugSymbolLevel = "FULL" }
             // Only sign if signing keys are present in local.properties,
             // so unsigned builds still work without them.
             if (hasSigning) {
