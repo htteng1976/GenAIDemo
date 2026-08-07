@@ -36,7 +36,6 @@ implementation("com.google.mlkit:genai-speech-recognition:1.0.0-alpha1")
 建立 recognizer、檢查/下載模型、開始辨識（皆為 suspend / Flow）：
 
 ```kotlin
-import com.google.mlkit.genai.common.DownloadStatus
 import com.google.mlkit.genai.common.FeatureStatus
 import com.google.mlkit.genai.common.audio.AudioSource
 import com.google.mlkit.genai.speechrecognition.*
@@ -50,20 +49,8 @@ val recognizer = SpeechRecognition.getClient(
     }
 )
 
-// 2) 檢查模型狀態，必要時下載（download() 回傳 Flow<DownloadStatus>）
-when (recognizer.checkStatus()) {          // suspend
-    FeatureStatus.AVAILABLE   -> { /* 可直接辨識 */ }
-    FeatureStatus.UNAVAILABLE -> { /* 此裝置不支援 */ }
-    FeatureStatus.DOWNLOADABLE,
-    FeatureStatus.DOWNLOADING -> recognizer.download().collect { status ->
-        when (status) {
-            is DownloadStatus.DownloadStarted   -> {}                 // status.bytesToDownload
-            is DownloadStatus.DownloadProgress  -> {}                 // status.totalBytesDownloaded
-            is DownloadStatus.DownloadCompleted -> {}
-            is DownloadStatus.DownloadFailed    -> {}                 // status.e
-        }
-    }
-}
+// 2) 確認模型可用（首次使用需先下載模型，見 download() Flow）
+if (recognizer.checkStatus() != FeatureStatus.AVAILABLE) return   // suspend
 
 // 3) 從麥克風即時辨識（startRecognition() 回傳 Flow<SpeechRecognizerResponse>）
 val request = speechRecognizerRequest { audioSource = AudioSource.fromMic() }
@@ -82,7 +69,8 @@ recognizer.close()
 ```
 
 > 需要 `RECORD_AUDIO` 權限（執行期請求）。`AudioSource.fromMic()` 由函式庫負責錄音（16kHz mono PCM），
-> 無需自行管理 `AudioRecord`。完整實作見 `app/src/main/java/com/genai/demo/SpeechViewModel.kt`。
+> 無需自行管理 `AudioRecord`。首次使用某語言時的模型下載（`recognizer.download()`）與完整實作，
+> 見 `app/src/main/java/com/genai/demo/SpeechViewModel.kt`。
 
 ## 環境需求
 
