@@ -25,6 +25,65 @@
 > Advanced 模式辨識更佳，但目前僅限 Pixel 10；本 App 使用 Basic 模式。
 > 官方限制：bootloader 解鎖的裝置無法使用。
 
+## 核心用法 — 串接 ML Kit GenAI Speech Recognizer
+
+依賴（`app/build.gradle.kts`）：
+
+```kotlin
+implementation("com.google.mlkit:genai-speech-recognition:1.0.0-alpha1")
+```
+
+建立 recognizer、檢查/下載模型、開始辨識（皆為 suspend / Flow）：
+
+```kotlin
+import com.google.mlkit.genai.common.DownloadStatus
+import com.google.mlkit.genai.common.FeatureStatus
+import com.google.mlkit.genai.common.audio.AudioSource
+import com.google.mlkit.genai.speechrecognition.*
+import java.util.Locale
+
+// 1) 建立 client（Basic 模式，指定辨識語言）
+val recognizer = SpeechRecognition.getClient(
+    speechRecognizerOptions {
+        locale = Locale.forLanguageTag("cmn-Hant-TW")   // 繁中；也支援 en-US、ja-JP…
+        preferredMode = SpeechRecognizerOptions.Mode.MODE_BASIC
+    }
+)
+
+// 2) 檢查模型狀態，必要時下載（download() 回傳 Flow<DownloadStatus>）
+when (recognizer.checkStatus()) {          // suspend
+    FeatureStatus.AVAILABLE   -> { /* 可直接辨識 */ }
+    FeatureStatus.UNAVAILABLE -> { /* 此裝置不支援 */ }
+    FeatureStatus.DOWNLOADABLE,
+    FeatureStatus.DOWNLOADING -> recognizer.download().collect { status ->
+        when (status) {
+            is DownloadStatus.DownloadStarted   -> {}                 // status.bytesToDownload
+            is DownloadStatus.DownloadProgress  -> {}                 // status.totalBytesDownloaded
+            is DownloadStatus.DownloadCompleted -> {}
+            is DownloadStatus.DownloadFailed    -> {}                 // status.e
+        }
+    }
+}
+
+// 3) 從麥克風即時辨識（startRecognition() 回傳 Flow<SpeechRecognizerResponse>）
+val request = speechRecognizerRequest { audioSource = AudioSource.fromMic() }
+recognizer.startRecognition(request).collect { response ->
+    when (response) {
+        is SpeechRecognizerResponse.PartialTextResponse -> updatePartial(response.text)
+        is SpeechRecognizerResponse.FinalTextResponse   -> appendFinal(response.text)
+        is SpeechRecognizerResponse.CompletedResponse   -> { /* 本段結束 */ }
+        is SpeechRecognizerResponse.ErrorResponse       -> { /* response.e */ }
+    }
+}
+
+// 停止 / 釋放
+recognizer.stopRecognition()   // suspend
+recognizer.close()
+```
+
+> 需要 `RECORD_AUDIO` 權限（執行期請求）。`AudioSource.fromMic()` 由函式庫負責錄音（16kHz mono PCM），
+> 無需自行管理 `AudioRecord`。完整實作見 `app/src/main/java/com/genai/demo/SpeechViewModel.kt`。
+
 ## 環境需求
 
 - JDK 21（本機用 Homebrew 的 `openjdk@21`，建置前 `export JAVA_HOME=/opt/homebrew/opt/openjdk@21`）
