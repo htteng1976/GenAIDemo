@@ -1,8 +1,20 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
 }
+
+// Signing secrets are read from local.properties (never committed to git).
+// Expected keys:
+//   keystore.storeFile, keystore.keyAlias, keystore.storePassword, keystore.keyPassword
+val localPropertiesFile = rootProject.file("local.properties")
+val localProperties = Properties().apply {
+    if (localPropertiesFile.exists()) load(FileInputStream(localPropertiesFile))
+}
+val hasSigning = localProperties.getProperty("keystore.storePassword") != null
 
 android {
     namespace = "com.genai.demo"
@@ -17,6 +29,19 @@ android {
         vectorDrawables { useSupportLibrary = true }
     }
 
+    signingConfigs {
+        create("release") {
+            if (hasSigning) {
+                storeFile = rootProject.file(
+                    localProperties.getProperty("keystore.storeFile", "upload-keystore.jks")
+                )
+                storePassword = localProperties.getProperty("keystore.storePassword")
+                keyAlias = localProperties.getProperty("keystore.keyAlias", "upload")
+                keyPassword = localProperties.getProperty("keystore.keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -24,6 +49,11 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            // Only sign if signing keys are present in local.properties,
+            // so unsigned builds still work without them.
+            if (hasSigning) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
 
