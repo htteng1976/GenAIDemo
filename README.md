@@ -5,6 +5,13 @@
 
 本專案旨在探索 **GenAI 與 AICore 在邊緣 AI（Edge AI）的實際應用**——以裝置端語音辨識為例，實測 on-device 模型的可用性、效能與使用體驗。
 
+## 畫面 Screenshots
+
+<p>
+  <img src="docs/assets/screenshot-languages.png" width="45%" alt="多國語言選單" />
+  <img src="docs/assets/screenshot-recognizing.png" width="45%" alt="即時語音辨識" />
+</p>
+
 ## 技術重點
 
 - 100% 裝置端推論，無需網路、無需 API key。
