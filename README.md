@@ -3,6 +3,8 @@
 一個用 **ML Kit GenAI Speech Recognition**（裝置端、免 API key）的 Android App：
 按麥克風 → 說話 → 即時顯示辨識文字。預設辨識語系為**繁體中文（台灣）** `cmn-Hant-TW`，並支援多國語言切換。
 
+本專案旨在探索 **GenAI 與 AICore 在邊緣 AI（Edge AI）的實際應用**——以裝置端語音辨識為例，實測 on-device 模型的可用性、效能與使用體驗。
+
 ## 技術重點
 
 - 100% 裝置端推論，無需網路、無需 API key。
