@@ -24,6 +24,9 @@
 > 注意：ML Kit GenAI Speech Recognition 目前是 **1.0.0-alpha1**，API 之後可能變動。
 > Advanced 模式辨識更佳，但目前僅限 Pixel 10；本 App 使用 Basic 模式。
 > 官方限制：bootloader 解鎖的裝置無法使用。
+>
+> 支援裝置與 API 詳情見官方文件：
+> [ML Kit GenAI API（含支援裝置列表）](https://developers.google.com/ml-kit/genai?hl=zh-tw)
 
 ## 核心用法 — 串接 ML Kit GenAI Speech Recognizer
 
