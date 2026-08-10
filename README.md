@@ -5,6 +5,16 @@
 
 本專案旨在探索 **GenAI 與 AICore 在邊緣 AI（Edge AI）的實際應用**——以裝置端語音辨識為例，實測 on-device 模型的可用性、效能與使用體驗。
 
+## 下載 Download
+
+在 Google Play 取得：
+
+<a href="https://play.google.com/store/apps/details?id=com.htteng.voicetotext&hl=zh_TW">
+  <img src="https://play.google.com/intl/en_us/badges/static/images/badges/zh-tw_badge_web_generic.png" height="64" alt="Google Play 立即下載" />
+</a>
+
+> <https://play.google.com/store/apps/details?id=com.htteng.voicetotext>
+
 ## 畫面 Screenshots
 
 <p>
