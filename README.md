@@ -1,5 +1,8 @@
 # 離線語音轉文字 — Offline Voice to Text
 
+[![Google Play](https://img.shields.io/badge/Google_Play-已上架-brightgreen?logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.htteng.voicetotext&hl=zh_TW)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 一個用 **ML Kit GenAI Speech Recognition**（裝置端、免 API key）的 Android App：
 按麥克風 → 說話 → 即時顯示辨識文字。預設辨識語系為**繁體中文（台灣）** `cmn-Hant-TW`，並支援多國語言切換。
 
